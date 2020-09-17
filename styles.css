@@ -1,3 +1,6 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+/* END OF FONT */
 * {
   margin: 0;
   padding: 0;
@@ -21,22 +24,23 @@ color: #fff;
 text-transform: uppercase;
 }
 
-nav > ul {
+nav ul {
   float: right;
   margin-right: 25px;
   list-style: none;
 }
 
-nav > ul > li {
+nav ul li {
   display: inline-block;
   line-height: 50px;
   margin: 0 15px;
   color: #fff;
   font-size: 18px;
+  font-family: 'Didact Gothic', sans-serif;
   text-decoration: none;
 }
 
-nav > ul > li  a {
+nav ul li a {
   position: relative;
   padding: 5px 0;
   text-decoration: none;
@@ -53,9 +57,9 @@ label #sign-two {
   display: none;
 }
 
-#menu {
+/* #res-menu {
   display: none;
-}
+} */
 
 .banner-area {
   background: linear-gradient(to right, rgba(0,0,0,0.1),rgba(0,0,0,0.2)), url(back.jpg);
@@ -64,4 +68,57 @@ label #sign-two {
   background-position: center center;
   height: 100vh;
 
+}
+
+.banner-text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text > h2 {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #fff;
+  margin-top: -140px;
+  font-size: 56px;
+  text-align: center;
+}
+
+/* RESPONSIV DESIGN FOR IPADS */
+@media (max-width: 870px) {
+  label #sign-one{
+    display:block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: crimson;
+    top: 50px;
+    left: -100%;
+    text-align: center;
+    transition: .5s;
+    z-index: 10;
+  }
+  nav > ul > li {
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+    font-size: 20px;
+    color: #fff;/* Osäker på varför den inte syns */
+
+  }
+  nav > ul > li a {
+    font-size: 20px;
+  } /* Osäker om denna funkar */
+  #res-menu:checked ~ ul {
+    left: 0;
+  }
 }
