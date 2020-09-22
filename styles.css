@@ -3,7 +3,7 @@
 
 :root {
   /* theme colors */
-  --text-gray: #3F4954;
+  --text-gray: rgb(235, 119, 217);
   --bg-color: #0f0f0f;
 
   /*  theme font-family */
@@ -11,7 +11,7 @@
   --livvic: 'Livvic', sans-serif;
 
   /* gradient colors */
-  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --sky: linear-gradient(120deg, #f4e5f4 0%, #d35aeb 100%);
   /* 010 Winter Neva */
 }
 
@@ -92,7 +92,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  background-color: #a1c4fd;
+  background-color: #fabffa;
   padding: 5px;
 }
 
@@ -101,7 +101,7 @@ ul {
 @media only screen and (max-width: 800px) {
   /* hamburgarmeny */
   :root {
-    --primary-color: rgba(13, 110, 139, 0.75);
+    --primary-color: rgb(235, 119, 217);
     --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
   }
@@ -128,14 +128,14 @@ ul {
     display: none;
   }
 
-  .showcase {
+  .main {
     background: var(--primary-color);
     color: #fff;
     height: 100vh;
     position: relative;
   }
 
-  .showcase:before {
+  .main:before {
     content: '';
     background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
     position: absolute;
@@ -146,7 +146,7 @@ ul {
     z-index: -1;
   }
 
-  .showcase .showcase-inner {
+  .main .main-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,11 +155,11 @@ ul {
     height: 100%;
   }
 
-  .showcase h1 {
+  .main h1 {
     font-size: 4rem;
   }
 
-  .showcase p {
+  .main p {
     font-size: 1.3rem;
   }
 
@@ -179,6 +179,11 @@ ul {
   }
 
   /* MENU STYLES */
+  input,
+  .hamburger {
+    display: initial;
+  }
+
   .menu-wrap {
     position: fixed;
     top: 0;
@@ -307,14 +312,23 @@ ul {
     transition: opacity 0.4s ease;
   }
 
+  .menu-wrap .menu > div > div > ul {
+     display: flex;
+     flex-direction: column;
+     border-radius: 50%;
+     padding: 30vh;
+     
+  }
+
   .menu-wrap .menu>div>div>ul>li {
     list-style: none;
     color: #fff;
     font-size: 1.5rem;
     padding: 1rem;
+   
   }
 
-  .menu-wrap .menu>div>div>ul>li>a {
+  .menu-wrap .menu>div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
