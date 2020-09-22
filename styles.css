@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Livvic:400,600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Sacramento&display=swap');
 
 :root {
   /* theme colors */
@@ -35,13 +36,14 @@ h1 {
 #holygrail-container {
   display: grid;
   grid:
-  'header header header'
-  'nav nav nav'
-  'main main main'
-  'footer footer footer';
-  
+    'header header header'
+    'nav nav nav'
+    'main main main'
+    'footer footer footer';
+
   background: #fff;
   min-height: 100% auto;
+  justify-content: center;
 }
 
 header,
@@ -50,27 +52,26 @@ nav,
 aside,
 section {
   padding: 5px;
-  border: 1px solid #000;
-  text-align: center;
+/*   border: 1px solid #000;
+ */  text-align: center;
 
 }
 
 header {
   grid-area: header;
   justify-content: center;
-  
+
 }
 
 nav {
   grid-area: nav;
   height: 50px;
   justify-content: center;
- 
+
 }
 
 section {
   grid-area: main;
- 
 }
 
 
@@ -83,7 +84,7 @@ footer {
 /* Nedan är navigationen */
 
 input,
-.hamburger{
+.hamburger {
   display: none;
 }
 
@@ -92,13 +93,106 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  background-color: #fabffa;
-  padding: 5px;
+  padding: 15px;
+  width:100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: all ease-in-out .5s;
+  outline: none;
+  background: rgba(250, 207, 214);
+  font-family: 'Montserrat', sans-serif;
+  left: -5px;
+}
+
+li {
+  transition: transform .2s;
+}
+
+li:hover {
+  transform: scale(1.5);
+  transform: scale(1.1) translateY(-8%);
+  box-shadow: 2px 7px 3px 0px rgba(172, 172, 172, 0.1);
+}
+
+a {
+  text-decoration: none;
 }
 
 
+/* Slut på nav */
+
+
+/* början på main */
+
+.main {
+  background: url(back.jpg) no-repeat center center/cover;
+  height: 75vh;
+  width: fit-content;
+  position: relative;
+  text-align: center;
+  padding: 150px;
+
+
+}
+
+.main>h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 4rem;
+}
+
+.container {
+  padding: 5px;
+}
+
+.main>.main-inner>h3 {
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* button */
+.btn {
+  text-transform: uppercase;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: all ease-in-out .5s;
+  outline: none;
+  background: rgba(250, 207, 214);
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.btn:hover {
+  transform: scale(1.1) translateY(-8%);
+  box-shadow: 2px 7px 3px 0px rgba(172, 172, 172, 0.1);
+  background: rgba(255, 178, 203)
+}
 
 @media only screen and (max-width: 800px) {
+
   /* hamburgarmeny */
   :root {
     --primary-color: rgb(235, 119, 217);
@@ -312,12 +406,12 @@ ul {
     transition: opacity 0.4s ease;
   }
 
-  .menu-wrap .menu > div > div > ul {
-     display: flex;
-     flex-direction: column;
-     border-radius: 50%;
-     padding: 30vh;
-     
+  .menu-wrap .menu>div>div>ul {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    padding: 30vh;
+
   }
 
   .menu-wrap .menu>div>div>ul>li {
@@ -325,13 +419,14 @@ ul {
     color: #fff;
     font-size: 1.5rem;
     padding: 1rem;
-   
+
   }
 
-  .menu-wrap .menu>div > div > ul > li > a {
+  .menu-wrap .menu>div>div>ul>li>a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
   }
+
   /* slut på hamburgarmeny */
 }
