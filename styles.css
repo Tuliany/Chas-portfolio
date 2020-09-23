@@ -196,9 +196,8 @@ article {
 
 .about > .quote {
     font-family: 'Montserrat', sans-serif;
-    font-weight: cursive;
     font-size:15px;
-    padding: 1px;
+    padding: 10px;
     word-break: break-all;
 }
 
