@@ -91,10 +91,11 @@ input,
 ul {
   display: flex;
   flex-direction: row;
+  align-content: center;
   justify-content: space-between;
   list-style-type: none;
   padding: 15px;
-  width:100%;
+  width: 100% auto;
   text-transform: uppercase;
   border: none;
   border-radius: 10px;
@@ -104,7 +105,6 @@ ul {
   outline: none;
   background: rgba(250, 207, 214);
   font-family: 'Montserrat', sans-serif;
-  left: -5px;
 }
 
 li {
@@ -122,6 +122,7 @@ a {
 }
 
 
+
 /* Slut på nav */
 
 
@@ -130,7 +131,7 @@ a {
 .main {
   background: url(back.jpg) no-repeat center center/cover;
   height: 40vh;
-  width: fit-content;
+  width: fit-content auto;
   position: relative;
   text-align: center;
   padding: 150px;
@@ -194,11 +195,6 @@ article {
 @media only screen and (max-width: 800px) {
 
   /* hamburgarmeny */
-  :root {
-    --primary-color: rgb(235, 119, 217);
-    --overlay-color: rgba(24, 39, 51, 0.85);
-    --menu-speed: 0.75s;
-  }
 
   * {
     margin: 0;
@@ -216,6 +212,7 @@ article {
     margin: auto;
     overflow: hidden;
     padding: 0 3rem;
+    align-items: center;
   }
 
   h1 {
@@ -223,8 +220,8 @@ article {
   }
 
   .main {
-    background: var(--primary-color);
-    color: #fff;
+  background: url(back.jpg) no-repeat center center/cover;
+    color: #000;
     height: 100vh;
     position: relative;
   }
@@ -247,6 +244,7 @@ article {
     justify-content: center;
     text-align: center;
     height: 100%;
+    padding: 15px;
   }
 
   .main h1 {
@@ -258,13 +256,15 @@ article {
   }
 
   .btn {
-    display: inline-block;
     border: none;
     color: #fff;
     padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
+    position: absolute;
+    bottom: 5%;
+    left: 37%;
+
   }
 
   .btn:hover {
@@ -303,7 +303,7 @@ article {
     width: 60px;
     height: 60px;
     padding: 1rem;
-    background: var(--primary-color);
+    background: rgba(255, 178, 203);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,7 +363,7 @@ article {
 
   .menu-wrap .toggler:checked~.menu>div {
     transform: scale(1);
-    transition-duration: var(--menu-speed);
+    transition-duration: 0.5s;
   }
 
   .menu-wrap .toggler:checked~.menu>div>div {
@@ -385,7 +385,7 @@ article {
   }
 
   .menu-wrap .menu>div {
-    background: var(--overlay-color);
+    background:overlay-color;
     width: 200vw;
     height: 200vw;
     display: flex;
