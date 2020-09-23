@@ -26,6 +26,7 @@ h1 {
     'header header header'
     'main main main'
     '... about ...'
+    ' ... aside ...'
     'footer footer footer';
   background: #fff;
   justify-content: center;
@@ -36,6 +37,7 @@ h1 {
 header,
 section,
 article,
+aside,
 footer {
   padding: 5px;
   text-align: center;
@@ -67,6 +69,10 @@ article {
   grid-area: about;
 }
 
+aside {
+  grid-area: aside;
+  
+}
 
 
 footer {
@@ -194,13 +200,17 @@ article {
    padding: 1px;
 }
 
-.about > .quote {
+.about > .quoter {
     font-family: 'Montserrat', sans-serif;
     font-size:15px;
     padding: 10px;
     word-break: break-all;
 }
 
+/* aside */
+.join {
+  display: block;
+}
 
 
 @media only screen and (max-width: 800px) {
@@ -436,7 +446,5 @@ article {
 
   /* slut på hamburgarmeny */
 
-  .main > h2 {
-    
-  }
+
 }
