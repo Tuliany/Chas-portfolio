@@ -1,6 +1,6 @@
-# Chas-portfolio
+# Co-working - webpage
 
-# Uppgiften
+# Assigment
 The goal of this task was to independently create a page with HTML and CSS The code has been optimized and validated. In addition, the code is accessibility-adapted, follows standards and is browser-adapted.
 
 
