@@ -20,33 +20,35 @@ h1 {
 
 #holygrail-container {
   display: grid;
-  height: auto;
-  width: auto;
-  grid:
+  /* height: auto;
+  width: auto; */
+  grid-template-areas:
     'header header header'
     'main main main'
-    '... about ...' 
+    '... about ...'
     'footer footer footer';
   background: #fff;
   justify-content: center;
-/*   grid-template-rows: 50px 1fr 2fr 50px;
-  grid-template-columns: 150px 1fr 150px; */
+  overflow: visible;
+
 }
 
 header,
-footer,
-nav,
-aside,
-section {
+section,
+article,
+footer {
   padding: 5px;
-/*   border: 1px solid #000;
- */  text-align: center;
-
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 10px;
 }
 
 header {
   grid-area: header;
   justify-content: center;
+
 
 }
 
@@ -61,7 +63,7 @@ section {
   grid-area: main;
 }
 
-section {
+article {
   grid-area: about;
 }
 
@@ -69,6 +71,7 @@ section {
 
 footer {
   grid-area: footer;
+  
 }
 
 /* Ovan är Holygrail template */
@@ -112,6 +115,7 @@ li:hover {
 a {
   text-decoration: none;
 }
+
 /* Slut på nav */
 
 
@@ -119,22 +123,23 @@ a {
 
 .main {
   background: url(back.jpg) no-repeat center center/cover;
-  height: 30vh;
+  height: 70vh;
   width: fit-content;
   text-align: center;
-  padding: 150px;
+  padding: 15px;
 }
 
-.main>h2 {
+.main > h2 {
   font-family: 'Sacramento', cursive;
   font-size: 4rem;
+  padding-top: 10%;
 }
 
 .container {
   padding: 5px;
 }
 
-.main>.main-inner>h3 {
+.main > .main-inner > h3 {
   font-family: 'Montserrat', sans-serif;
   padding: 15px;
 }
@@ -175,11 +180,28 @@ article {
   box-shadow: 2px 7px 3px 0px rgba(172, 172, 172, 0.1);
   background: rgba(255, 178, 203)
 }
+
 /* about */
 .about {
-  
-  
+  width: fit-content;
+  padding: 50px;
 }
+
+.about > h4 {
+   font-family: 'Montserrat', sans-serif;
+   font-weight:bolder;
+   font-size:20px;
+   padding: 1px;
+}
+
+.about > .quote {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: cursive;
+    font-size:15px;
+    padding: 1px;
+    word-break: break-all;
+}
+
 
 
 @media only screen and (max-width: 800px) {
@@ -192,9 +214,9 @@ article {
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
-/*     line-height: 1.4;
- */  }
+    margin: 0;
+  }
+ 
 
   .container {
     max-width: 960px;
@@ -209,9 +231,9 @@ article {
   }
 
   .main {
-  background: url(back.jpg) no-repeat center center/cover;
+    background: url(back.jpg) no-repeat center center/cover;
     color: #000;
-    height: 100vh;
+    height: 80vh;
     position: relative;
   }
 
@@ -232,12 +254,13 @@ article {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
+    height: auto;
     padding: 15px;
   }
 
-  .main h1 {
-    font-size: 4rem;
+  .main h2 {
+    font-size: 3rem;
+    padding-top: 10%;
   }
 
   .main p {
@@ -250,7 +273,6 @@ article {
     padding: 0.75rem 1.5rem;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
-    position: absolute;
     bottom: 5%;
     left: 37%;
 
@@ -414,4 +436,8 @@ article {
   }
 
   /* slut på hamburgarmeny */
+
+  .main > h2 {
+    
+  }
 }
