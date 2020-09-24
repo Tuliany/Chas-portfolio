@@ -10,12 +10,22 @@
   <link type rel="stylesheet" href="styles.css">
   <!-- END OF STYLING -->
   <title>Portfolio</title>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("pdf");
+      if (x.style.display === "none") {
+        x.style.display = "inline-block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 </head>
 
 <body>
   <div id="holygrail-container">
     <header class="menu-wrap">
-      <h1>Portfolio</h1>
+      <h1><span>👩🏽‍💻</span></h1>
       <input type="checkbox" class="toggler">
       <nav class="hamburger">
         <div></div>
@@ -59,10 +69,10 @@
         nemo rerum.</p>
     </article>
 
-    <aside id="join"class="join">
-      <embed src="assets/joinher.pdf#toolbar=0" type="application/pdf" width="350px" height="400px">
-      <p>If you are unable view pdf file please click on below and download the file: </p>
-      <a href=”#” class="btn">Download PDF</a>
+      <aside id="join"class="join">
+      <p class="join">Om du önskar att joina oss, kan du fylla i intresseanmälan nedan <span class="pointer">👇🏽</span> </p>
+      <button onclick="myFunction()" class="btn">Download PDF</button>
+      <embed id="pdf" src="assets/joinher.pdf#toolbar=0" type="application/pdf" width="350px" height="400px">
     </aside>
 
     <footer id="contact">@copyright by Tuliany 2020</footer>

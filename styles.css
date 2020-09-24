@@ -25,8 +25,8 @@ h1 {
   grid-template-areas:
     'header header header'
     'main main main'
-    '... about ...'
-    ' ... aside ...'
+    '... about aside'
+    /* ' ...  ...' */
     'footer footer footer';
   background: #fff;
   justify-content: center;
@@ -71,13 +71,13 @@ article {
 
 aside {
   grid-area: aside;
-  
+
 }
 
 
 footer {
   grid-area: footer;
-  
+
 }
 
 /* Ovan är Holygrail template */
@@ -135,7 +135,7 @@ a {
   padding: 15px;
 }
 
-.main > h2 {
+.main>h2 {
   font-family: 'Sacramento', cursive;
   font-size: 4rem;
   padding-top: 10%;
@@ -145,7 +145,7 @@ a {
   padding: 5px;
 }
 
-.main > .main-inner > h3 {
+.main>.main-inner>h3 {
   font-family: 'Montserrat', sans-serif;
   padding: 15px;
 }
@@ -193,25 +193,40 @@ article {
   padding: 50px;
 }
 
-.about > h4 {
-   font-family: 'Montserrat', sans-serif;
-   font-weight:bolder;
-   font-size:20px;
-   padding: 1px;
+.about>h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 1px;
 }
 
-.about > .quoter {
-    font-family: 'Montserrat', sans-serif;
-    font-size:15px;
-    padding: 10px;
-    word-break: break-all;
+.about>.quoter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  word-break: break-all;
 }
 
 /* aside */
+
+
 .join {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
 }
 
+.pointer {
+  display: contents;
+
+}
+
+#pdf {
+  display: none;
+  padding: 5px;
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -225,7 +240,7 @@ article {
   body {
     margin: 0;
   }
- 
+
 
   .container {
     max-width: 960px;
