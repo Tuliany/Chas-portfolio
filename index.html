@@ -70,12 +70,24 @@
     </article>
 
       <aside id="join"class="join">
-      <p class="join">Om du önskar att joina oss, kan du fylla i intresseanmälan nedan <span class="pointer">👇🏽</span> </p>
-      <button onclick="myFunction()" class="btn">Download PDF</button>
+      <p class="join-text">Om du önskar att joina oss, kan du fylla i intresseanmälan nedan <span class="pointer">👇🏽</span> </p>
+      <button onclick="myFunction()" class="btn">Intresseanmälan</button>
       <embed id="pdf" src="assets/joinher.pdf#toolbar=0" type="application/pdf" width="350px" height="400px">
     </aside>
 
-    <footer id="contact">@copyright by Tuliany 2020</footer>
+    <footer id="contact">
+    <form action="/contact">
+      <label class="contact-title">Join us </label>
+      <input type="text" id="name" name="firstname" placeholder="Your name..">
+      <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+      <input type="submit" class="btn" value="Submit">
+    </form>
+
+     
+
+    </form>
+    </footer>
   </div>
 </body>
 
