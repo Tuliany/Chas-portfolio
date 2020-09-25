@@ -92,7 +92,7 @@ footer {
 .menu {
   width: 100%;
   position: fixed;
-  top: 5;
+  top: 0;
   right: 0;
   text-align: center;
 
@@ -106,12 +106,12 @@ ul {
   justify-content: space-around;
   text-transform: uppercase;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 25px;
   color: white;
   transition: all ease-in-out .5s;
   outline: none;
   background: rgba(250, 207, 214);
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -128,7 +128,7 @@ li:hover {
 a {
   text-decoration: none;
   color: #fff;
-  
+
 }
 
 /* Slut på nav */
@@ -224,7 +224,6 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  word-break: break-word;
 }
 
 .pointer {
@@ -255,16 +254,25 @@ form {
   display: flex;
   flex-direction: column;
   padding: 15px;
+}
+
+label .contact-title {
+  font-family: 'Sacramento', cursive;
+  position: relative;
+  left: 13%;
 
 }
 
 .contact-title {
   font-family: 'Sacramento', cursive;
+  align-self: center;
   position: relative;
-  left: 14%;
+  right: -14%;
   font-size: 25px;
 }
-input[type="text"], textarea {
+
+input[type="text"],
+textarea {
   width: 33%;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -281,8 +289,35 @@ input[type=submit] {
   left: 59%;
 }
 
+.socials {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 50px;
+  position: absolute;
+  justify-content: center;
+}
+
+h5 {
+  font-family: 'Montserrat',
+    sans-serif;
+  font-size: 18px;
+  padding: 15px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+a {
+  cursor: pointer;
+}
 
 
+
+/* ************** MOBILE DEVICES **************************** */
 
 
 @media only screen and (max-width: 800px) {
@@ -302,7 +337,7 @@ input[type=submit] {
   #holygrail-container {
     display: flex;
     flex-direction: column;
-    justify-content:
+
   }
 
   h1 {
@@ -515,11 +550,53 @@ input[type=submit] {
   }
 
   /* slut på hamburgarmeny */
+  /* about */
+  video {
+    width: 400px;
+  }
+
   .pointer {
     display: none;
   }
 
+  /* aside */
   .join-text {
     display: block;
   }
+
+  /* footer */
+
+  label .contact-title {
+    position: relative;
+    right: -14%;
+    font-size: 20px;
+
+  }
+
+  .contact-title {
+    position: relative;
+    right: 0%;
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  textarea {
+    left: 33%;
+  }
+
+  input[type=submit] {
+    width: fit-content;
+    position: relative;
+    left: 38%;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-self: center;
+
+
+  }
+
 }

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- STYLING -->
 
-  <link type rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- END OF STYLING -->
   <title>Portfolio</title>
   <script>
@@ -61,7 +61,7 @@
     <article id="about" class="about">
       <h4 title="quote">"Join the future, where female entrepreneurs unite to make the world a better place"</h4>
       <p title="author" class="quoter">-Tuliany, founder of Join Her</p>
-      <video width="560" height="316" controls>
+      <video width="460" height="316" controls>
         <source src="join_her.mp4" type="video/mp4">
       </video>
       <p title="what we do">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis unde nostrum voluptas nihil
@@ -69,23 +69,27 @@
         nemo rerum.</p>
     </article>
 
-      <aside id="join"class="join">
+      <aside id="join" class="join">
       <p class="join-text">Om du önskar att joina oss, kan du fylla i intresseanmälan nedan <span class="pointer">👇🏽</span> </p>
       <button onclick="myFunction()" class="btn">Intresseanmälan</button>
-      <embed id="pdf" src="assets/joinher.pdf#toolbar=0" type="application/pdf" width="350px" height="400px">
+      <embed id="pdf" src="assets/joinher.pdf#toolbar=0" type="application/pdf" width="350" height="400">
     </aside>
 
-    <footer id="contact">
+    <footer id="social">
     <form action="/contact">
+      <container class="socials">
+        <h5>We are everywhere</h5>
+        <div class="icon-box">
+          <a href="#"><img clas="s-icon" src="./assets/fb.png" alt="fb-icon"></a>
+          <a href="#"><img clas="s-icon" src="assets/insta.png" alt="insta-icon"></a>
+          <a href="#"><img clas="s-icon" src="assets/map.png" alt="map-icon"></a>
+        </div>
+      </container>
       <label class="contact-title">Join us </label>
       <input type="text" id="name" name="firstname" placeholder="Your name..">
       <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
       <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-      <input type="submit" class="btn" value="Submit">
-    </form>
-
-     
-
+      <input type="submit" class="btn" value="I'm in!">
     </form>
     </footer>
   </div>
