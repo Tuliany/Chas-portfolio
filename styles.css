@@ -599,17 +599,36 @@ a {
   }
 
 }
-@media only screen and (max-width: 400px){
-  .main p{
+
+@media only screen and (max-width: 400px) {
+  .btn {
+    padding: 10px;
+  }
+
+  .main {
+    height: 50vh;
+  }
+
+  .main p {
     display: none;
+  }
+
+  .about>h4 {
+    width: 90%;
   }
 
   .socials {
     width: 90%;
   }
 
-  input[type=submit] {
+  input[type="text"],
+  textarea {
     left: 30%;
+    width: 40%;
+  }
 
+  input[type=submit] {
+    left: 34%;
+    padding: 10px;
   }
 }
