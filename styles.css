@@ -239,7 +239,6 @@ article {
 /* footer */
 
 footer {
-  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -599,4 +598,18 @@ a {
 
   }
 
+}
+@media only screen and (max-width: 800px){
+  .main p{
+    display: none;
+  }
+
+  .socials {
+    width: 80%;
+  }
+
+  input[type=submit] {
+    left: 30%;
+
+  }
 }
