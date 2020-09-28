@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" href="assets/unicorn-icon.jpg">
   <!-- STYLING -->
 
   <link rel="stylesheet" href="styles.css">
   <!-- END OF STYLING -->
-  <title>Portfolio</title>
+  <title>Co-working 🦄</title>
   <script>
     function myFunction() {
       var x = document.getElementById("pdf");
@@ -26,7 +27,9 @@
   <div id="holygrail-container">
     <header class="menu-wrap">
       <h1><span>👩🏽‍💻</span></h1>
-      <input type="checkbox" class="toggler">
+      <label for="hamburger-menu">
+      <input type="checkbox" class="toggler" tabindex="0">
+      </label>
       <nav class="hamburger">
         <div></div>
       </nav>
@@ -34,10 +37,10 @@
         <div>
           <div>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#join">Join Us</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a tabindex="1" href="#home">Home</a></li>
+              <li><a tabindex="2" href="#about">About</a></li>
+              <li><a tabindex="3" href="#join">Join Us</a></li>
+              <li><a tabindex="4" href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -49,22 +52,23 @@
       <h2>Join her</h2>
       <article class="container main-inner">
         <h3>co-working</h3>
-        <p title="The business model">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perspiciatis libero
+        <p><meta name="business modell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perspiciatis libero
           sapiente assumenda, quam
           nihil
           laudantium fuga magni. Ad, numquam velit. Error quia necessitatibus in obcaecati nostrum expedita beatae.
         </p>
-        <a href="#read" class="btn">Read More</a>
+        <a href="#read"  class="btn">Read More</a>
       </article>
     </section>
-
     <article id="about" class="about">
       <h4 title="quote">"Join the future, where female entrepreneurs unite to make the world a better place"</h4>
       <p title="author" class="quoter">-Tuliany, founder of Join Her</p>
-      <video width="460" height="316" controls>
-        <source src="join_her.mp4" type="video/mp4">
+      <video width="400" height="316" controls>
+        <source src="assets/join_her.mp4" type="video/mp4">
       </video>
-      <p id="read" title="what we do">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis unde nostrum voluptas nihil
+      <p id="read">
+        <meta description="what we do">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis unde nostrum voluptas
+        nihil
         consequuntur iure ullam, repellendus, aut perspiciatis enim ipsum illum maxime labore est quas ut accusantium
         nemo rerum.</p>
     </article>
@@ -86,9 +90,9 @@
         </div>
       </container>
       <label class="contact-title">Join us </label>
-      <input type="text" id="name" name="firstname" placeholder="Your name..">
-      <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
-      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+      <label for="name"><input type="text" id="name" name="firstname" placeholder="Your name.."></label>
+      <label for="last-name"><input type="text" id="lastname" name="lastname" placeholder="Your last name.."></label>
+      <label for="message"><textarea id="subject" name="subject" placeholder="Write something.."></textarea></label>
       <input type="submit" class="btn" value="I'm in!">
     </form>
     </footer>

@@ -127,8 +127,8 @@ li:hover {
 
 a {
   text-decoration: none;
-  color: #fff;
-
+  color: #000;
+  font-weight: bolder;
 }
 
 /* Slut på nav */
@@ -137,7 +137,8 @@ a {
 /* början på main */
 
 .main {
-  background: url(back.jpg) no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)), url(assets/back.jpg) no-repeat center center/cover;
   height: 70vh;
   width: fit-content;
   text-align: center;
@@ -162,6 +163,8 @@ a {
 p {
   font-family: 'Montserrat', sans-serif;
   padding: 15px;
+      font-weight: bolder;
+
 }
 
 article {
@@ -183,7 +186,8 @@ article {
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: #000;
+  font-weight: bolder;
   transition: all ease-in-out .5s;
   outline: none;
   background: rgba(250, 207, 214);
@@ -278,14 +282,14 @@ textarea {
   padding: 5px;
   margin: 5px;
   position: relative;
-  left: 60%;
+  left: 26%;
   color: hsla(0, 0%, 80%, 0.906)
 }
 
 input[type=submit] {
   width: 10%;
   position: relative;
-  left: 59%;
+  left: 58%;
 }
 
 .socials {
@@ -344,7 +348,7 @@ a {
   }
 
   .main {
-    background: url(back.jpg) no-repeat center center/cover;
+    background: url(assets/back.jpg) no-repeat center center/cover;
     color: #000;
     height: 80vh;
     position: relative;
