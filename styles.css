@@ -138,7 +138,7 @@ a {
 
 .main {
   background: linear-gradient(rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.2)), url(assets/back.jpg) no-repeat center center/cover;
+      rgba(0, 0, 0, 0.2)), url(assets/back.jpg) no-repeat center center/cover;
   height: 70vh;
   width: fit-content;
   text-align: center;
@@ -163,7 +163,7 @@ a {
 p {
   font-family: 'Montserrat', sans-serif;
   padding: 15px;
-      font-weight: bolder;
+  font-weight: bolder;
 
 }
 
@@ -282,8 +282,8 @@ textarea {
   padding: 5px;
   margin: 5px;
   position: relative;
-  left: 26%;
-  color: hsla(0, 0%, 80%, 0.906)
+  left: 50%;
+  color: #636363
 }
 
 input[type=submit] {
@@ -381,12 +381,11 @@ a {
   }
 
   .main p {
-    font-size: 1.3rem;
+    font-size: 13px;
   }
 
   .btn {
     border: none;
-    color: #fff;
     padding: 0.75rem 1.5rem;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
@@ -568,6 +567,20 @@ a {
   }
 
   /* footer */
+  h5 {
+    width: fit-content;
+    align-self: center;
+  }
+
+  .icon-box {
+    align-self: inherit;
+    display: inherit;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
 
   label .contact-title {
     position: relative;
@@ -584,13 +597,14 @@ a {
 
   input[type="text"],
   textarea {
-    left: 33%;
+    left: 25%;
+    width: 45%
   }
 
   input[type=submit] {
     width: fit-content;
     position: relative;
-    left: 38%;
+    left: 40%;
   }
 
   .socials {
