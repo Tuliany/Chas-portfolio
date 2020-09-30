@@ -80,11 +80,10 @@ footer {
 
 }
 
-/* Ovan är Holygrail template */
+
 
 /* Nedan är navigationen */
-
-/* input, */
+/*  input, */
 .hamburger {
   display: none;
 }
@@ -107,10 +106,9 @@ ul {
   text-transform: uppercase;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
   padding: 25px;
-  color: white;
   transition: all ease-in-out .5s;
   outline: none;
-  background: rgba(250, 207, 214);
+  background: hsl(350, 81%, 90%);
   font-family: 'Montserrat', sans-serif;
 
 }
@@ -190,14 +188,14 @@ article {
   font-weight: bolder;
   transition: all ease-in-out .5s;
   outline: none;
-  background: rgba(250, 207, 214);
+  background: hsl(350, 81%, 90%);
   font-family: 'Montserrat', sans-serif;
 }
 
 .btn:hover {
   transform: scale(1.1) translateY(-8%);
   box-shadow: 2px 7px 3px 0px rgba(172, 172, 172, 0.1);
-  background: rgba(255, 178, 203)
+  background: hsl(341, 100%, 85%)
 }
 
 /* about */
@@ -246,7 +244,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  border-top: 2px solid rgba(250, 207, 214);
+  border-top: 2px solid hsl(350, 81%, 90%);
   background-color: #fff;
   color: #000;
   text-align: center;
@@ -436,7 +434,7 @@ a {
   }
 
   /* Hamburger Line */
-  .menu-wrap .hamburger>div {
+  .menu-wrap .hamburger > div {
     position: relative;
     flex: none;
     width: 100%;
@@ -471,14 +469,14 @@ a {
   }
 
   /* Turns Lines Into X */
-  .menu-wrap .toggler:checked+.hamburger>div:before,
-  .menu-wrap .toggler:checked+.hamburger>div:after {
+  .menu-wrap .toggler:checked+.hamburger > div:before,
+  .menu-wrap .toggler:checked+.hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
   }
 
   /* Rotate On Hover When Checked */
-  .menu-wrap .toggler:checked:hover+.hamburger>div {
+  .menu-wrap .toggler:checked:hover+.hamburger > div {
     transform: rotate(225deg);
   }
 
